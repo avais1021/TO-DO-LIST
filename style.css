@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background: rgb(58, 58, 174);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main .box{
+    width: 600px;
+    height: 500px;
+    border-radius:7px ;
+    padding: 10px;
+    background: white;
+    
+}
+
+main .box input{
+    padding: 10px;
+    border-radius: 8px;
+    background: rgb(163, 206, 249);
+    color: rgb(141, 141, 141);
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    color: black;
+
+}
+
+main #to_do_box{
+    margin-top: 20px;
+}
+
+main #to_do_box li{
+    list-style: none;
+    font-size: 20px;
+    background: rgb(239, 231, 159);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+main #to_do_box li span{
+    cursor: pointer;
+}
+
+main #to_do_box .done{
+    background: rgb(206 205 199);
+}
+main #to_do_box .done p{
+    text-decoration: line-through;
+}
+main #to_do_box .done span .close{
+    text-decoration: none;
+    cursor: pointer;
+}

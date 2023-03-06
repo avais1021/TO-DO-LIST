@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDo2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box  ;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(102, 174, 255);
+            min-height: 100vh;
+        }
+        .box{
+            background: white;
+            min-height: 400px;
+            width: 600px;
+        }
+        input{
+            width: 100%;
+            padding: 7px;
+            font-size: 18px;
+            background: black;
+            color: white;
+        }
+        li{
+            background: yellow;
+            padding: 6px;
+            font-size: 16px;
+            margin-top: 8px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        .done{
+            background: rgb(102, 111, 124);
+        }
+        .done p{
+            text-decoration: line-through;
+        }
+        .close{
+            cursor: pointer ;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+
+        <div class="box">
+            <input class="inputnotes" type="text" autofocus placeholder="Please Enter your Tasks">
+            <ul class="orderList">
+            </ul>
+        </div>
+    </main>
+
+    <script src="pracToDo.js"></script>
+</body>
+</html>
