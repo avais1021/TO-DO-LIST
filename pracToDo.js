@@ -24,31 +24,54 @@ const addToDo = (inputData)=> {
 
     liTag.querySelector('.close').addEventListener('click' , function(){
         liTag.remove();
-        saveToDo()
     })
     
 }
 
-const saveToDo = () =>{
-        const notes = document.querySelectorAll('.notes');
-        const data = [];
-        notes.forEach((val)=>{
-            data.push(val.innerText)
-            // console.log(val.innerText)
-        })
-        // localStorage.setItem('notes' , JSON.stringify(data))
-        localStorage.setItem("notes", JSON.stringify(data));
-        console.log(data); 
-}
+const saveToDo = ()=>{
+    const notes = document.querySelectorAll('.notes');
+    const data = [];
+    notes.forEach((notesVal)=>{
+        console.log(notesVal.innerText);
+        data.push(notesVal.innerText)
+    })
+    console.log(data);
+    localStorage.setItem('notes' , JSON.stringify(data));
+}   
 
 (
     function(){
         const localData = JSON.parse(localStorage.getItem('notes'));
         localData.forEach((ldata)=>{
-            addToDo(ldata);
+            addToDo(ldata)
+            console.log(ldata)
         })
     }
 )()
 
+// ------------------------------------------new-practice----------------------------------------------------------------------------
 
+
+const area = document.querySelector('.area');
+
+
+area.addEventListener('keyup' ,  function(){
+   
+    saveSample();
+})
+
+const saveSample = ()=>{
+    const data = [];
+    data.push(area.value)
+    // console.log(area.value);
+    localStorage.setItem('area' , JSON.stringify(data))
+    console.log(data)
+}
+
+(
+    function(){
+        const localvalarea = JSON.parse(localStorage.getItem('area'))
+        area.value = localvalarea;
+    }
+)()
 

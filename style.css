@@ -11,7 +11,7 @@ h1 {
     margin-bottom: 20px;
     letter-spacing: 3px;
     font-size: 40px;
-    animation: move 2s linear infinite;
+    /* animation: move 2s linear infinite; */
     animation-direction: alternate;
 }
 @keyframes move{
